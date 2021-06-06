@@ -1,0 +1,19 @@
+#Read 5 Digits from user and generates the sum and Averge
+#!/bin/bash 
+
+range=50
+sum=0
+avgerge=0
+for (( i = 0; i < 5; i++ )); 
+do
+
+       	# gives a random 2-digit number
+	result=$((10+RANDOM%49))
+
+	arr[i]=$result
+	sum=$((sum+arr[i]))
+done
+
+echo "5 2-digit randum Numbers are: ${arr[@]}"
+echo "Sum: $sum"
+echo "Average: $(($sum/5))"
